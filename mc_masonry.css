@@ -1,0 +1,20 @@
+/* Global settings to override the margin settings in default woocommerce styles, which sets the margin-right for columns and leads to problems in mastonry grid. 
+ * Basically we use the Gutter in masnory script for gaps between columns instead, see overriden woocommerce/loop-start.php
+ */
+
+ul.products[class*="columns-"].mc_masonry_grid li.product 
+{
+    margin-left: 0;
+    margin-right: 0;
+	margin-bottom: 1.5em;
+}
+
+@media (max-width: 921px)
+{	
+ul.products[class*="columns-"].mc_masonry_grid li.product:nth-child(n)
+{
+    margin-left: 0;
+    margin-right: 0;
+	margin-bottom: 1em;
+}
+}
